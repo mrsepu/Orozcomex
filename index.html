@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OROZCOMEX S.R.L.</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header id="bienvenida" class="section welcome-section">
@@ -57,18 +57,22 @@
         <h2>Nuestros Valores</h2>
         <div class="tarjetas">
             <div class="tarjeta">
+                <i class="fas fa-balance-scale"></i> <!-- Ícono para Transparencia -->
                 <h3>Transparencia</h3>
                 <p>Actuamos de manera íntegra, honesta y oportuna.</p>
             </div>
             <div class="tarjeta">
+                <i class="fas fa-handshake"></i> <!-- Ícono para Compromiso -->
                 <h3>Compromiso</h3>
                 <p>Valoramos las diferencias e individualidades.</p>
             </div>
             <div class="tarjeta">
+                <i class="fas fa-users"></i> <!-- Ícono para Trabajo en equipo -->
                 <h3>Trabajo en equipo</h3>
                 <p>Experimentamos el desafío de construir el futuro.</p>
             </div>
             <div class="tarjeta">
+                <i class="fas fa-check-circle"></i> <!-- Ícono para Responsabilidad -->
                 <h3>Responsabilidad</h3>
                 <p>Somos una entidad de puertas abiertas.</p>
             </div>
@@ -78,12 +82,16 @@
     <section id="servicios" class="section servicios-section">
         <div class="container">
             <div class="image">
-                <img src="servicios.png" alt="Servicios">
+                <img src="img/servicios.png" alt="Servicios">
             </div>
             <div class="text">
+                <div class="text-title">
                 <h2>Servicios</h2>
-                <div class="servicio">
-                    <h3>Importación</h3>
+                </div>
+                
+                <h3>Importación</h3>
+                <div class="contenido">
+                    <img src="img/importacion-sin-fondo.png" alt="Importación">
                     <ul>
                         <li>Importación para el consumo</li>
                         <li>Admisión de mercancías con exoneración de tributos aduaneros</li>
@@ -92,46 +100,66 @@
                         <li>Admisión temporal para perfeccionamiento activo (RITEX)</li>
                     </ul>
                 </div>
-                <div class="servicio">
-                    <h3>Exportación</h3>
+                
+                <h3>Exportación</h3>
+                <div class="contenido">
+                    <img src="img/exportacion-sin-fondo.png" alt="Exportación">
                     <ul>
                         <li>Exportación definitiva</li>
                         <li>Exportación temporal para perfeccionamiento pasivo</li>
                     </ul>
                 </div>
-                <div class="servicio">
-                    <h3>Asesoramiento Técnico y Logístico</h3>
+                
+                <h3>Asesoramiento Técnico y Logístico</h3>
+                <div class="contenido">
+                    <img src="img/asesoramiento-sin-fondo.png" alt="Asesoramiento">
                     <ul>
                         <li>Comercio exterior</li>
                         <li>Logística internacional</li>
                     </ul>
+                    <button id="consulta-button" class="boton-consulta">Consulta Ahora</button>
                 </div>
             </div>
         </div>
-        <button id="consulta-button" class="consulta-button">Consulta Ahora</button>
+        
     </section>
 
-    <section id="faq" class="section faq-section">
+    <section id="preguntas-frecuentes" class="section faq-section">
         <div class="container">
             <div class="text">
                 <h2>Preguntas Frecuentes</h2>
-                <div class="faq-item">
-                    <h3>¿Cómo empadronarse en la Aduana Nacional de Bolivia?</h3>
-                    <p>PASO 1: Ingresar al sitio Web de la Aduana www.aduana.gob.bo y seleccionar el enlace “Nuevo Padrón de Importadores” en el área de “Servicios”.</p>
-                    <p>PASO 2: Sobre la página principal del “Nuevo Padrón de Importadores”, seleccionar la opción habilitada para el registro de empresas o entidades públicas.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Qué aranceles aduaneros hay en Bolivia?</h3>
-                    <p>5%, 10%, 15%, 20%, 25%, 30%, 35% y 40%</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Qué productos no pagan impuestos de Aduana Bolivia?</h3>
-                    <p>Se refiere a los bienes que se permiten introducir al país sin el pago de tributos aduaneros :</p>
-                    <ul>
-                        <li>Prendas de vestir y efectos personales usados.</li>
-                        <li>Libros, revistas e impresos de todo carácter.</li>
-                        <li>Artículos de uso y consumo personal como: Una máquina fotográfica, una computadora portátil, una filmadora.</li>
-                    </ul>
+                <div class="contenido">               
+                    <div class="faq-item">
+                        <h3 class="pregunta">¿Cómo empadronarse en la Aduana Nacional de Bolivia?</h3>
+                        <ul>
+                        <li class="respuesta"><span>PASO 1</span>: Ingresar al sitio Web de la Aduana www.aduana.gob.bo y seleccionar el enlace “Nuevo Padrón de Importadores” en el área de “Servicios”.</li>
+                        <li class="respuesta"><span>PASO 2</span>: Sobre la página principal del “Nuevo Padrón de Importadores”, seleccionar la opción habilitada para el registro de empresas o entidades públicas.</li>
+                        </ul>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="pregunta">¿Qué aranceles aduaneros hay en Bolivia?</h3>
+                        <p class="respuesta">5%, 10%, 15%, 20%, 25%, 30%, 35% y 40%</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="pregunta">¿Qué productos no pagan impuestos de Aduana Bolivia?</h3>
+                        <p class="respuesta">Se refiere a los bienes que se permiten introducir al país sin el pago de tributos aduaneros :</p>
+                        <ul>
+                            <li class="respuesta">Prendas de vestir y efectos personales usados.</li>
+                            <li class="respuesta">Libros, revistas e impresos de todo carácter.</li>
+                            <li class="respuesta">Artículos de uso y consumo personal como: Una máquina fotográfica, una computadora portátil, una filmadora.</li>
+                        </ul>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="pregunta">Cuánto tiempo demora la atención de un trámite para la habilitación de un Operador de Comercio Exterior?</h3>
+                        <p class="respuesta">La habilitación de un Operador de Comercio Exterior se realiza a través del Sistema SUMA, para lo cual el Operador debe presentar su solicitud  ingresando al mencionado Sistema con su usuario y contraseña. Una vez recibido el trámite, siempre y cuando  este no cuente con observaciones, el Operador será habilitado en un plazo de 24 a 48 horas.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="pregunta">¿Qué es una franquicia para equipaje?</h3>
+                        <p class="respuesta">Es la exención del pago de tributos aduaneros de importación con el que se beneficia el viajero internacional, por la internación de artículos nuevos de estricto uso o consumo personal, sin fines comerciales, hasta un valor FOB de un mil 00/100 dólares estadounidenses ($us. 1.000).</p>
+                    </div>
+                    <div class="faq-item">
+                        <img src="img/Preguntas-sin-fondo.png" alt="Preguntas">
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,7 +188,8 @@
             </div>
         </div>
     </section>
-
+    <!-- Botón flotante Consulta Ahora -->
+    <a href="#contacto" id="boton-flotante" class="boton-consulta">Consulta Ahora</a>
     <button id="scroll-top-button" class="scroll-top-button">⬆</button>
     <script src="js/script.js" charset="utf-8"></script>
 </body>

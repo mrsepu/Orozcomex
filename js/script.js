@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     // Botones "Consulta Ahora" que llevan a la sección de contacto
-    const consultaButtons = document.querySelectorAll('.consulta-btn');
+    const consultaButtons = document.querySelectorAll('.boton-consulta');
   
     consultaButtons.forEach(button => {
       button.addEventListener('click', () => {
@@ -65,3 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTopButton.style.display = 'none';
   });
   
+    // Mostrar/ocultar botón flotante
+    const botonFlotante = document.getElementById('boton-flotante');
+    const contactoSeccion = document.getElementById('contacto');
+
+    window.addEventListener('scroll', () => {
+        const contactoPos = contactoSeccion.getBoundingClientRect();
+        if (contactoPos.top <= window.innerHeight && contactoPos.bottom >= 0) {
+            botonFlotante.style.display = 'none';
+        } else {
+            botonFlotante.style.display = 'block';
+        }
+    });
