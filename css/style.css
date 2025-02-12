@@ -289,28 +289,11 @@
     margin-bottom: 10px;
 }
 
-#servicios .boton-consulta {
-    display: inline-block;
-    background-color: #1a4789;
-    color: white;
-    padding: 20px 20px;
-    border-radius: 45px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 7rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    height: fit-content;
-}
-
-#servicios .boton-consulta:hover {
-    background-color: #0056b3; /* Azul oscuro */
-}
-
 /* Sección Preguntas Frecuentes */
 #preguntas-frecuentes {
     padding: 5rem 5%;
     background-color: #f9f9f9; /* Fondo gris claro */
+
 }
 
 #preguntas-frecuentes h2 {
@@ -361,10 +344,10 @@
     background-color: #e66030; /* Naranja oscuro */
 }
 
-/* Sección Contacta con Nosotros */
+/* Sección Contacta con Nosotros 
 #contacto {
     padding: 50px 20px;
-    background-color: #1a4789; /* Azul */
+    background-color: #1a4789; 
     color: white;
     text-align: center;
 }
@@ -404,7 +387,157 @@
     background-color: #0056b3;
     color: white;
 }
+*/
 
+#contacto {
+  background-color: #003366;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contacto .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contacto .text {
+  width: 74%; /* Ocupa el 75% del ancho */
+}
+
+#contacto .image{
+  width: 24%; /* Ocupa el 25% del ancho */
+  height: 100%;
+}
+
+#contacto .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+#contacto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#contacto .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#contacto .mapa {
+  flex: 1 1 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#contacto .details {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#contacto .details .info,
+#contacto .details .horarios {
+  flex: 1 1 calc(50% - 10px);
+  background-color: #ffffff;
+  color: #003366;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+#contacto .details h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#contacto .botones-contacto {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+#contacto .boton-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #003366;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#contacto .boton-contacto span {
+  margin-right: 5px;
+}
+
+#contacto .boton-contacto:hover {
+  background-color: #ff7f50;
+  color: white;
+}
+
+#contacto .social {
+  margin-top: 30px;
+}
+
+#contacto .social a img {
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+#contacto .social a:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Estilos para el botón flotante */
+
+#servicios .boton-consulta {
+  margin-top: 7rem;
+}
+
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff3131;
+  border-color: white;
+  border-style: dashed;
+  color: white;
+  padding: 20px 20px;
+  border-radius: 45px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: fit-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.boton-flotante:hover {
+  background-color: #be0000; /* Azul más oscuro */
+}
+
+/* Ocultar el botón cuando el usuario está en la sección de contacto */
+.boton-oculto {
+  display: none;
+}
   
   /* Responsive */
   @media (max-width: 1200px) {
@@ -439,5 +572,34 @@
 
     #servicios .container {
         flex-direction: column;
-      }  
+    }  
+
+    #preguntas-frecuentes .contenido {
+      display:inline;
+    }
+
+    #contacto .container {
+      flex-direction: column;
+    }
+
+    #contacto .text {
+        width: 100%;
+    }
+
+    #contacto .image {
+        display: none;
+    }
+  }
+
+  @media (max-width: 700px) {
+    #contacto .details .info,
+    #contacto .details .horarios {
+      flex: 1 1 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #servicios .image img {
+      height:50vh;
+    }
   }

@@ -37,43 +37,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-  
-    // Funcionalidad para el botón flotante de volver al inicio
-    const backToTopButton = document.createElement('button');
-    backToTopButton.textContent = '⬆';
-    backToTopButton.classList.add('back-to-top');
-  
-    document.body.appendChild(backToTopButton);
-  
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  
-    // Mostrar/ocultar el botón de volver al inicio
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-  
-    // Inicialización: ocultar el botón al cargar la página
-    backToTopButton.style.display = 'none';
-  });
-  
-    // Mostrar/ocultar botón flotante
-    const botonFlotante = document.getElementById('boton-flotante');
-    const contactoSeccion = document.getElementById('contacto');
 
-    window.addEventListener('scroll', () => {
-        const contactoPos = contactoSeccion.getBoundingClientRect();
-        if (contactoPos.top <= window.innerHeight && contactoPos.bottom >= 0) {
-            botonFlotante.style.display = 'none';
+    const btnConsulta = document.getElementById("btn-consulta");
+    const seccionContacto = document.getElementById("contacto");
+
+    function toggleBotonFlotante() {
+        const rect = seccionContacto.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            btnConsulta.classList.add("boton-oculto"); // Oculta el botón si está en "Contacta con nosotros"
         } else {
-            botonFlotante.style.display = 'block';
+            btnConsulta.classList.remove("boton-oculto"); // Muestra el botón si está en otra sección
         }
-    });
+    }
+
+    function actualizarTextoBoton() {
+      if (window.innerWidth <= 1200) { // Para dispositivos móviles (ancho menor o igual a 768px)
+          btnConsulta.textContent = "?";
+      } else {
+          btnConsulta.textContent = "Consulta Ahora";
+      }
+    }
+
+    // Detectar cambios en el tamaño de pantalla
+    window.addEventListener("resize", actualizarTextoBoton);
+
+    // Verificar el scroll para mostrar/ocultar el botón
+    window.addEventListener("scroll", toggleBotonFlotante);
+    
+    // Asegurar que el botón no esté visible si ya está en la sección "Contacta con nosotros" al cargar la página
+    toggleBotonFlotante();
+    actualizarTextoBoton();
+});
+
+  
+   
+  
+
+  
+    
