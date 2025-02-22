@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnConsulta.classList.remove("boton-oculto"); // Muestra el botón si está en otra sección
         }
     }
-
+/*
     function actualizarTextoBoton() {
       if (window.innerWidth <= 1200) { // Para dispositivos móviles (ancho menor o igual a 768px)
           btnConsulta.textContent = "?";
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
           btnConsulta.textContent = "Consulta Ahora";
       }
     }
-
+*/
     // Detectar cambios en el tamaño de pantalla
     window.addEventListener("resize", actualizarTextoBoton);
 
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Asegurar que el botón no esté visible si ya está en la sección "Contacta con nosotros" al cargar la página
     toggleBotonFlotante();
-    actualizarTextoBoton();
+    //actualizarTextoBoton();
 });
 
   

@@ -106,9 +106,20 @@
     align-items: center;
     justify-content: space-between;
     padding: 5rem 5%;
-    background-color: #1a4789;
-    color: white;
+    /*background-color: #1a4789;*/
+    background-color: #f4f4f4;
+    /*color: white;*/
   }
+
+  #quienes-somos h2 {
+    
+    /*font-size: 2rem;*/
+    color: #f4f4f4;
+    background-color: #ff3131; 
+    padding: 0 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
   
   #quienes-somos img {
     width: 100%;
@@ -506,7 +517,7 @@
 
 /* Estilos para el botón flotante */
 
-#servicios .boton-consulta {
+#servicios .btn-consulta {
   margin-top: 7rem;
 }
 
@@ -514,12 +525,12 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ff3131;
-  border-color: white;
+  background-color: #ff0202;
+  border-color: #ff0202;
   border-style: dashed;
-  color: white;
+  border-radius: 50%;
+  /*color: white;*/
   padding: 20px 20px;
-  border-radius: 45px;
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
@@ -530,9 +541,16 @@
   z-index: 1000; /* Asegura que esté sobre otros elementos */
 }
 
-.boton-flotante:hover {
-  background-color: #be0000; /* Azul más oscuro */
+.boton-flotante img {
+  width: 60px;
+  height: 60px;
+  color: white;
 }
+
+/*
+.boton-flotante:hover {
+  /*background-color: #be0000; /* Azul más oscuro 
+} */
 
 /* Ocultar el botón cuando el usuario está en la sección de contacto */
 .boton-oculto {
